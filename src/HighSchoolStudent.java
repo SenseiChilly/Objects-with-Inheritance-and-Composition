@@ -22,6 +22,8 @@ public class HighSchoolStudent extends Student{
 
 	@Override
 	public String toString() {
-		return "HS Student: " + this.name + " " + "GPA: " + getGPA();
+		String str;
+		str = String.format("HS Student: %s GPA: %.2f", name, getGPA());
+		return str;
 	}
 }

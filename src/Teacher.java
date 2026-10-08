@@ -3,7 +3,6 @@ public class Teacher extends Person {
 	
 	private String subject;
 	private boolean fullTime;
-	private String ft;
 	
 	public Teacher(String name, int age, String subject, boolean fullTime) {
 		super(name, age);
@@ -30,7 +29,17 @@ public class Teacher extends Person {
 
 	@Override
 	public String toString() {
-		return "TEACHER: " + this.name + " " + "SUBJECT: " + this.subject + " " + "(" + "ppop" + ")";
+		String ft;
+		String str;
+		
+		if(fullTime == true) {
+			ft = "FT";
+		}
+		else {
+			ft = "PT";
+		}
+		
+		str = String.format("TEACHER: %s SUBJECT: %s (%s)", this.name, this.subject, ft);
+		return str;
 	}
-	
 }

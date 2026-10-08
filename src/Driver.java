@@ -55,7 +55,7 @@ public class Driver {
 		for(int i = 0; i < people.size(); i++) {
 			if(people.get(i) instanceof CollegeStudent) {
 				credits = (int)(Math.random() * 60 + 1);
-				gpa = (double)(Math.random() * 4);
+				gpa = (double)(Math.random() * 4.0);
 				((CollegeStudent) people.get(i)).addCredits(credits);
 				((CollegeStudent) people.get(i)).addQualityPoints(gpa);
 			}
@@ -64,14 +64,13 @@ public class Driver {
 				gpa = (double)(Math.random() * 4);
 				((HighSchoolStudent) people.get(i)).addCredits(credits);
 				((HighSchoolStudent) people.get(i)).addQualityPoints(gpa);
+				//Student s = (Student) people.get(i);
 			}
 		}
 		
 		for(int i = 0; i < people.size(); i++) {
 			System.out.println(people.get(i).toString());
 		}
-		
-		
+		fin.close();
 	}
-
 }

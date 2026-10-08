@@ -32,6 +32,10 @@ public class CollegeStudent extends Student{
 
 	@Override
 	public String toString() {
-		return "College Student: " + this.name + " " + "MAJOR: " + this.major + " " + "GPA: " + getGPA();
+		String str;
+		str = String.format("College Student: %s MAJOR: %s GPA: %.2f", name, major, getGPA());
+		return str;
 	}
+	
+	//String str = String.format("College Student: %s MAJOR: %s GPA: %s", this.name, this.major, getGPA());
 }
